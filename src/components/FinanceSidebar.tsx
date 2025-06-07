@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { 
-  layout-dashboard, 
-  bar-chart, 
-  activity,
+  LayoutDashboard, 
+  BarChart, 
+  Activity,
   Menu
 } from 'lucide-react';
 import {
@@ -19,19 +19,19 @@ import {
 const menuItems = [
   {
     title: 'Dashboard',
-    icon: layout-dashboard,
+    icon: LayoutDashboard,
     url: '#dashboard',
     isActive: true
   },
   {
     title: 'Transações',
-    icon: activity,
+    icon: Activity,
     url: '#transactions',
     isActive: false
   },
   {
     title: 'Relatórios',
-    icon: bar-chart,
+    icon: BarChart,
     url: '#reports',
     isActive: false
   },

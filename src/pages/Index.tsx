@@ -5,7 +5,7 @@ import { FinanceSidebar } from '@/components/FinanceSidebar';
 import { FinanceCard } from '@/components/FinanceCard';
 import { TransactionList } from '@/components/TransactionList';
 import { FinanceChart } from '@/components/FinanceChart';
-import { activity, bar-chart, layout-dashboard, menu } from 'lucide-react';
+import { Activity, BarChart, LayoutDashboard, Menu } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -35,7 +35,7 @@ const Index = () => {
                 title="Saldo Total"
                 value="R$ 12.450"
                 subtitle="Disponível"
-                icon={layout-dashboard}
+                icon={LayoutDashboard}
                 gradient="bg-success-gradient"
                 trend={{ value: "+8.2%", isPositive: true }}
               />
@@ -43,7 +43,7 @@ const Index = () => {
                 title="Receitas"
                 value="R$ 6.200"
                 subtitle="Este mês"
-                icon={activity}
+                icon={Activity}
                 gradient="bg-finance-gradient"
                 trend={{ value: "+12.5%", isPositive: true }}
               />
@@ -51,7 +51,7 @@ const Index = () => {
                 title="Despesas"
                 value="R$ 4.100"
                 subtitle="Este mês"
-                icon={bar-chart}
+                icon={BarChart}
                 gradient="bg-danger-gradient"
                 trend={{ value: "-3.1%", isPositive: false }}
               />
@@ -59,7 +59,7 @@ const Index = () => {
                 title="Economia"
                 value="R$ 2.100"
                 subtitle="Este mês"
-                icon={menu}
+                icon={Menu}
                 gradient="bg-finance-gradient"
                 trend={{ value: "+15.8%", isPositive: true }}
               />
