@@ -8,21 +8,21 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 const Index = () => {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-background">
+      <div className="min-h-screen flex w-full bg-gray-50">
         <FinanceSidebar />
         <main className="flex-1 flex flex-col">
-          <header className="border-b bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-card/50">
+          <header className="border-b border-gray-200 bg-white">
             <div className="flex h-16 items-center px-6 gap-4">
-              <SidebarTrigger className="hover:bg-accent hover:text-accent-foreground transition-colors" />
+              <SidebarTrigger className="hover:bg-gray-100 hover:text-gray-900 transition-colors p-2 rounded-lg" />
               <div className="flex items-center gap-2">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold text-gray-900">
                   financeFlow
                 </h1>
               </div>
             </div>
           </header>
           
-          <div className="flex-1 p-6 space-y-6 bg-gradient-to-br from-background via-background to-muted/20">
+          <div className="flex-1 p-6 space-y-6 bg-gray-50">
             {/* Cards Overview */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <FinanceCard
@@ -59,15 +59,15 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Chart Section */}
               <div className="lg:col-span-2">
-                <div className="bg-card border rounded-xl p-6 shadow-sm">
-                  <h2 className="text-xl font-semibold mb-6 text-foreground">Visão Geral Mensal</h2>
+                <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                  <h2 className="text-xl font-semibold mb-6 text-gray-900">Visão Geral Mensal</h2>
                   <FinanceChart />
                 </div>
               </div>
 
               {/* Transactions Section */}
-              <div className="bg-card border rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl font-semibold mb-6 text-foreground">Transações Recentes</h2>
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h2 className="text-xl font-semibold mb-6 text-gray-900">Transações Recentes</h2>
                 <TransactionList />
               </div>
             </div>

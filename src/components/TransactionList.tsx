@@ -13,23 +13,23 @@ export function TransactionList() {
       {transactions.map((transaction) => (
         <div
           key={transaction.id}
-          className="flex items-center justify-between p-4 rounded-lg border bg-card/30 hover:bg-card/50 transition-colors"
+          className="flex items-center justify-between p-4 rounded-lg border border-gray-100 bg-gray-50/50 hover:bg-gray-100/50 transition-colors"
         >
           <div className="flex-1">
             <div className="flex items-center gap-3">
               <div className={`h-2 w-2 rounded-full ${
-                transaction.amount > 0 ? 'bg-emerald-500' : 'bg-red-500'
+                transaction.amount > 0 ? 'bg-green-500' : 'bg-red-500'
               }`} />
               <div>
-                <p className="font-medium text-foreground text-sm">{transaction.description}</p>
-                <p className="text-xs text-muted-foreground">{transaction.category} • {transaction.date}</p>
+                <p className="font-medium text-gray-900 text-sm">{transaction.description}</p>
+                <p className="text-xs text-gray-500">{transaction.category} • {transaction.date}</p>
               </div>
             </div>
           </div>
           <div className={`text-sm font-semibold ${
             transaction.amount > 0 
-              ? 'text-emerald-600 dark:text-emerald-400' 
-              : 'text-red-600 dark:text-red-400'
+              ? 'text-green-600' 
+              : 'text-red-600'
           }`}>
             {transaction.amount > 0 ? '+' : ''}R$ {Math.abs(transaction.amount).toFixed(2)}
           </div>
